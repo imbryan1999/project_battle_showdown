@@ -122,55 +122,57 @@ class _CreateAccountState extends State<CreateAccount> {
         child: Padding(
           padding: const EdgeInsets.symmetric(horizontal: 45.0, vertical: 20.0),
           child: Form(
+              key: _formKey,
               child: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            crossAxisAlignment: CrossAxisAlignment.center,
-            children: [
-              Image.asset('assets/images/login_logo.png'),
-              const SizedBox(
-                height: 15.0,
-              ),
-              const Text(
-                'Signup Below',
-                style: TextStyle(fontSize: 20.0, color: Colors.black),
-              ),
-              const SizedBox(
-                height: 45.0,
-              ),
-              _user,
-              const SizedBox(
-                height: 15.0,
-              ),
-              _password,
-              const SizedBox(
-                height: 25.0,
-              ),
-              _email,
-              const SizedBox(
-                height: 25.0,
-              ),
-              _signupButton,
-              const SizedBox(
-                height: 15.0,
-              ),
-              const Text(
-                'Already have an account?',
-                style: TextStyle(fontSize: 16.0, color: Colors.black),
-              ),
-              const SizedBox(
-                height: 5.0,
-              ),
-              GestureDetector(
-                onTap: () {
-                  Navigator.pop(context);
-                },
-                child: const Text(
-                  'Go Back',
-                  style: TextStyle(fontWeight: FontWeight.bold, fontSize: 16.0),
-                ),
-              )
-            ],
-          )),
+                mainAxisAlignment: MainAxisAlignment.center,
+                crossAxisAlignment: CrossAxisAlignment.center,
+                children: [
+                  Image.asset('assets/images/login_logo.png'),
+                  const SizedBox(
+                    height: 15.0,
+                  ),
+                  const Text(
+                    'Signup Below',
+                    style: TextStyle(fontSize: 20.0, color: Colors.black),
+                  ),
+                  const SizedBox(
+                    height: 45.0,
+                  ),
+                  _user,
+                  const SizedBox(
+                    height: 15.0,
+                  ),
+                  _password,
+                  const SizedBox(
+                    height: 25.0,
+                  ),
+                  _email,
+                  const SizedBox(
+                    height: 25.0,
+                  ),
+                  _signupButton,
+                  const SizedBox(
+                    height: 15.0,
+                  ),
+                  const Text(
+                    'Already have an account?',
+                    style: TextStyle(fontSize: 16.0, color: Colors.black),
+                  ),
+                  const SizedBox(
+                    height: 5.0,
+                  ),
+                  GestureDetector(
+                    onTap: () {
+                      Navigator.pop(context);
+                    },
+                    child: const Text(
+                      'Go Back',
+                      style: TextStyle(
+                          fontWeight: FontWeight.bold, fontSize: 16.0),
+                    ),
+                  )
+                ],
+              )),
         ),
       ),
     );
