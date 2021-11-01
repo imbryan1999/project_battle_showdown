@@ -14,34 +14,6 @@ class _HomePageScreenState extends State<HomePageScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      // appBar: AppBar(
-      //   backgroundColor: const Color(0xff242427),
-      //   automaticallyImplyLeading: false,
-      //   title: Padding(
-      //     padding: const EdgeInsets.symmetric(horizontal: 25.0),
-      //     child: Builder(
-      //         builder: (_) => IconButton(
-      //             onPressed: () => Scaffold.of(context).openDrawer(),
-      //             icon: const ImageIcon(
-      //                 AssetImage('assets/icons/menu_icon.png')))),
-      // leading: GestureDetector(
-      //     child: const ImageIcon(AssetImage('assets/icons/menu_icon.png')),
-      //     onTap: () => Scaffold.of(context).openDrawer()),
-      // actions: const [
-      //   Icon(Icons.alarm),
-      //   Padding(
-      //       padding: EdgeInsets.symmetric(horizontal: 18.0),
-      //       child: ImageIcon(AssetImage('assets/icons/user_icon.png')))
-      // ],
-      // ),
-      // ),
-
-      // Image.asset(
-      //               'assets/icons/guidelines_icon.png',
-      //               height: 22.0,
-      //               color: Colors.black,
-      //             ),
-
       appBar: AppBar(
         backgroundColor: const Color(0xff242427),
         elevation: 0,
@@ -64,17 +36,7 @@ class _HomePageScreenState extends State<HomePageScreen> {
                 'assets/icons/user_icon.png',
                 height: 30,
               ))
-          // Icon(Icons.alarm),
-          // Padding(
-          // padding: EdgeInsets.symmetric(horizontal: 18.0),
-          // child: ImageIcon(AssetImage('assets/icons/user_icon.png')),
-          // child: ,
-          // )
         ],
-        // automaticallyImplyLeading: false,
-        // title: IconButton(
-        //     onPressed: () => Scaffold.of(context).openDrawer(),
-        //     icon: const ImageIcon(AssetImage('assets/icons/menu_icon.png'))),
       ),
       drawer: const DrawerMenu(),
       body: SafeArea(child: Container()),
