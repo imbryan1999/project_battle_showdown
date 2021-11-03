@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:project_mark1/screens/homepage_screen.dart';
+import 'package:project_mark1/screens/credential_screen.dart';
 
 class SplashScreen extends StatefulWidget {
   const SplashScreen({Key? key}) : super(key: key);
@@ -29,6 +29,6 @@ class _SplashScreenState extends State<SplashScreen> {
   void _navigateHome() async {
     await Future.delayed(const Duration(seconds: 4), () {});
     Navigator.pushReplacement(
-        context, MaterialPageRoute(builder: (_) => const HomePageScreen()));
+        context, MaterialPageRoute(builder: (_) => const CredentialScreen()));
   }
 }

@@ -107,12 +107,13 @@ class _CreateAccountState extends State<CreateAccount> {
     return Scaffold(
       appBar: AppBar(
         centerTitle: true,
-        toolbarHeight: MediaQuery.of(context).size.height / 5,
         elevation: 0,
+        toolbarHeight: MediaQuery.of(context).size.height / 5,
         backgroundColor: const Color(0xff242427),
         title: const Text(
-          'Create Account',
-          style: TextStyle(fontSize: 22.0, color: Colors.white),
+          'Welcome to \nBattle Showdown',
+          style: TextStyle(
+              fontSize: 22.0, color: Colors.white, fontWeight: FontWeight.bold),
           textAlign: TextAlign.center,
         ),
         shape: const RoundedRectangleBorder(

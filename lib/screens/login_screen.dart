@@ -1,8 +1,8 @@
-// ignore_for_file: deprecated_member_use
-
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:project_mark1/screens/ac_recovery_screen.dart';
+
+import 'homepage_screen.dart';
 
 class LoginScreen extends StatefulWidget {
   const LoginScreen({Key? key}) : super(key: key);
@@ -65,7 +65,10 @@ class _LoginScreenState extends State<LoginScreen> {
       child: SizedBox(
         width: MediaQuery.of(context).size.width / 3,
         child: ElevatedButton(
-          onPressed: () {},
+          onPressed: () {
+            Navigator.pushReplacement(context,
+                MaterialPageRoute(builder: (_) => const HomePageScreen()));
+          },
           child: const Padding(
             padding: EdgeInsets.all(8.0),
             child: Text(
@@ -88,12 +91,13 @@ class _LoginScreenState extends State<LoginScreen> {
     return Scaffold(
       appBar: AppBar(
         centerTitle: true,
-        toolbarHeight: MediaQuery.of(context).size.height / 5,
         elevation: 0,
+        toolbarHeight: MediaQuery.of(context).size.height / 5,
         backgroundColor: const Color(0xff242427),
         title: const Text(
-          'Welcome Back',
-          style: TextStyle(fontSize: 22.0, color: Colors.white),
+          'Welcome to \nBattle Showdown',
+          style: TextStyle(
+              fontSize: 22.0, color: Colors.white, fontWeight: FontWeight.bold),
           textAlign: TextAlign.center,
         ),
         shape: const RoundedRectangleBorder(

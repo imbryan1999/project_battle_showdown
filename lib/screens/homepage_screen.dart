@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:project_mark1/widgets/bottom_navigation.dart';
 import 'package:project_mark1/widgets/drawer_menu.dart';
 
 class HomePageScreen extends StatefulWidget {
@@ -10,6 +11,7 @@ class HomePageScreen extends StatefulWidget {
 
 class _HomePageScreenState extends State<HomePageScreen> {
   int currentIndex = 0;
+  bool showTextField = false;
 
   @override
   Widget build(BuildContext context) {
@@ -39,6 +41,28 @@ class _HomePageScreenState extends State<HomePageScreen> {
         ],
       ),
       drawer: const DrawerMenu(),
+      floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
+      floatingActionButton: Padding(
+        padding: const EdgeInsets.all(8.0),
+        child: Expanded(
+          child: FloatingActionButton(
+            backgroundColor: Colors.black,
+            onPressed: () {
+              setState(() {
+                showTextField = !showTextField;
+              });
+            },
+            tooltip: 'Search',
+            child: const Icon(
+              Icons.search,
+              color: Colors.white,
+              size: 30,
+            ),
+            elevation: 2.0,
+          ),
+        ),
+      ),
+      bottomNavigationBar: const BottomNavigation(),
       body: SafeArea(child: Container()),
     );
   }

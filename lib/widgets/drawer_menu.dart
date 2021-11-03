@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:project_mark1/screens/credential_screen.dart';
 
 class DrawerMenu extends StatelessWidget {
   const DrawerMenu({Key? key}) : super(key: key);
@@ -272,6 +273,10 @@ class DrawerMenu extends StatelessWidget {
                   ),
                   onTap: () {
                     // Navigator.pushNamed(context, '/home');
+                    Navigator.pushReplacement(
+                        context,
+                        MaterialPageRoute(
+                            builder: (_) => const CredentialScreen()));
                   },
                 ),
               ],
